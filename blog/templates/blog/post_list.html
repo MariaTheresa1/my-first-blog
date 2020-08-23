@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Assinatura Digital</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Assine aqui</a></h1>
+            <h2>Trabalho de Segurança</h2>
+            {% for post in posts %}
+            {{ post }}
+            {% endfor %}
+            <p>aaaaaaaaa</p>
+            <h2><a href="">Meu primeiro post</a></h2>
+            <p>bbbbbb</p>
+        </div>
+
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
+        <div>
+            <p>ccccccccc</p>
+            <h2><a href="">Meu segundo post</a></h2>
+            <p>ddddddddd</p>
+        </div>
+    </body>
+</html>
